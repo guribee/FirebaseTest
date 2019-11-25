@@ -7,14 +7,26 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    var window: UIWindow?
+    var uname: String?
+    var uid: String?
+    var photoURL: String?
+    var otherUid: String?
+    var otherUname: String?
+    var otherPhotoURL: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        _ = Firestore.firestore()
         // Override point for customization after application launch.
+        
         return true
     }
 
